@@ -211,7 +211,7 @@ color: rgb(102,102,102);
 }
 
 .ui-list-68 li h4 {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .ui-list-68 .video-type {
@@ -507,8 +507,15 @@ div.speech:after
 }
 
 .demo-desc {
-    padding: 10px;
-    font-size: 16px;
+    padding: 14px;
+    font-size: 18px;
+    color: #000000;
+    font-family: PINGFANGBOLD;
+}
+
+.demo-title {
+    padding: 14px;
+    font-size: 20px;
     color: #000000;
     font-family: PINGFANGBOLD;
 }
