@@ -484,11 +484,13 @@ div.speech:after
 
 
 .PingFangJianLight{
+    font-weight: 600;
     font-family: PingFangjianlight;
 }
 
 .ui-whitespace p{
     font-family: PingFangjianlight;
+    color:#333333;
 }
 
 
