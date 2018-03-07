@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>招商银行180209-01</title>
+        <link rel="stylesheet" href="css/frozen.css">
+        <link rel="stylesheet" href="css/demo.css">
+        <script src="lib/zepto.min.js"></script>
+    </head>
+    
+    <body ontouchstart>
+        <header class="ui-header ui-header-positive ui-border-b">
+            <i class="ui-icon-return" onclick="history.back()"></i><h1 class="PingFangJianRegular">新手学堂</h1>
+        </header>
+        <section class="ui-container">
+
+
+
+<section id="list">
+
+    <div class="demo-item">
+        <div class="demo-block">
+            <ul class="ui-list-136">
+                <li class="list-1" data-href="180209-02.html">
+                    <div class="ui-list-img-68">
+                        <span class="w136"><img src="img/136x136.png"/></span>
+                    </div>
+                    <div class="ui-list-info-68">
+                        <h4 class="ui-nowrap-68 PingFangJianRegular">图文攻略</h4>
+                        <p class="PingFangJianRegular">黄金交易快速掌握</p>
+                    </div>
+                </li>
+                <li class="list-2" data-href="180209-09.html">
+                    <div class="ui-list-img-68">
+                        <span class="w136"><img src="img/136x136-default.png"/></span>
+                    </div>
+                    <div class="ui-list-info-68">
+                        <h4 class="ui-nowrap-68 PingFangJianRegular">小招说金</h4>
+                        <p class="PingFangJianRegular">分分钟进阶课堂视频</p>
+                    </div>
+                </li>
+                <li class="list-3" data-href="180209-16.html">
+                    <div class="ui-list-img-68">
+                        <span class="w136"><img src="img/136x136-default.png"/></span>
+                    </div>
+                    <div class="ui-list-info-68">
+                        <h4 class="ui-nowrap-68 PingFangJianRegular">终极测试</h4>
+                        <p class="PingFangJianRegular ">交易水平综合测试</p>
+                    </div>
+                </li>
+            </ul>
+            <!--<div class="ui-loading-wrap">-->
+                <!--<p>加载中</p>-->
+                <!--<i class="ui-loading"></i>-->
+            <!--</div>-->
+        </div>
+    </div>
+</section>
+
+
+
+        </section><!-- /.ui-container-->
+        <script>
+        $('.ui-list-136 li,.ui-tiled li').click(function(){
+            if($(this).data('href')){
+                location.href= $(this).data('href');
+            }
+        });
+        $('.ui-header .ui-btn').click(function(){
+            location.href= 'index.html';
+        });
+        </script>
+    </body>
+</html>
