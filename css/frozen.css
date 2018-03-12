@@ -47,12 +47,14 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
     padding: 0
 }
 
+/*
 @font-face {
     font-family:PingFang-thin;src:url(../font/PingFang-thin.ttf) format("truetype")
 }
+*/
 
 body {
-    font-family: PingFang-thin;
+    font-family: 'PingFang SC', sans-serif;
     line-height: 1.5;
     font-size: 16px;
     color: #000;

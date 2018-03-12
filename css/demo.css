@@ -224,6 +224,7 @@ color: rgb(102,102,102);
     color: #FFFFFF;
     display: block;
     text-align: center;
+    line-height: normal;
     margin-top: 54px;
     margin-right: 15px;
     border-radius: 5px 5px 5px 5px;
@@ -470,63 +471,30 @@ div.speech:after
     background-size: cover;
 }
 
-@font-face {
-    font-family:PingFangJianRegular;src:url(../font/PingFang-SC-Regular.otf) format("truetype")
-}
-
-.PingFangJianRegular{
-    font-family: PingFangJianRegular;
-}
-
-@font-face {
-    font-family:PingFangjianlight;src:url(../font/PINGFANGLIGHT.TTF) format("truetype")
-}
-
-
 .PingFangJianLight{
     font-weight: 600;
-    font-family: PingFangjianlight;
 }
 
 .ui-whitespace p{
-    font-family: PingFangjianlight;
     color:#333333;
-}
-
-
-@font-face {
-    font-family:PINGFANGBOLD;src:url(../font/PINGFANGBOLD.TTF) format("truetype")
-}
-
-
-.PingFangBOLD{
-    font-family: PINGFANGBOLD;
 }
 
 .ui-txt-gold {
     color: #dab275;
-    font-family: PINGFANGBOLD;
 }
 
 .demo-desc {
     padding: 14px;
     font-size: 18px;
     color: #000000;
-    font-family: PINGFANGBOLD;
 }
 
 .demo-title {
     padding: 14px;
     font-size: 18px;
     color: #000000;
-    font-family: PINGFANGBOLD;
 }
 
 .ui-placehold {
     color:rgb(153,153,153);
-    font-family: PingFangjianlight;
-}
-
-.demo-count {
-    font-family: PingFangjianlight;
 }
