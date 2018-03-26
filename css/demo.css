@@ -498,3 +498,20 @@ div.speech:after
 .ui-placehold {
     color:rgb(153,153,153);
 }
+
+
+@keyframes fade-in {  
+    0% {opacity: 0;}  
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}  
+@-webkit-keyframes fade-in { 
+    0% {opacity: 0;}  
+    40% {opacity: 0;}  
+    100% {opacity: 1;}  
+}  
+#testanimation {    
+    animation: fade-in;
+    animation-duration: 1.5s;
+    -webkit-animation:fade-in 1.5s; 
+} 
