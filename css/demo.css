@@ -189,17 +189,17 @@ color: rgb(102,102,102);
 }
 
 .ui-list-136 > li.list-1 {
-    background: #D9B273 url("../img/640x140-1.png") no-repeat center right;
+    background: #D9B273 url("../img/sy-bg-01.png") no-repeat center right;
     background-size: cover
 }
 
 .ui-list-136 > li.list-2 {
-    background: #D9B273 url("../img/640x140-2.png") no-repeat left center;
+    background: #D9B273 url("../img/sy-bg-02.png") no-repeat left center;
     background-size: cover
 }
 
 .ui-list-136 > li.list-3 {
-    background: #D9B273 url("../img/640x140-3.png") no-repeat center center;
+    background: #D9B273 url("../img/sy-bg-03.png") no-repeat center center;
     background-size: cover
 }
 
@@ -208,6 +208,36 @@ color: rgb(102,102,102);
     border-radius: 10px;
     margin: 15px 15px;
     display: -webkit-box;
+}
+
+.ui-list-68 > li.list-1 {
+    background: #D9B273 url("../img/xzsj-bg-01.png") no-repeat center right;
+    background-size: cover
+}
+
+.ui-list-68 > li.list-2 {
+    background: #D9B273 url("../img/xzsj-bg-02.png") no-repeat center right;
+    background-size: cover
+}
+
+.ui-list-68 > li.list-3 {
+    background: #D9B273 url("../img/xzsj-bg-03.png") no-repeat center right;
+    background-size: cover
+}
+
+.ui-list-68 > li.list-4 {
+    background: #D9B273 url("../img/xzsj-bg-04.png") no-repeat center right;
+    background-size: cover
+}
+
+.ui-list-68 > li.list-5 {
+    background: #D9B273 url("../img/xzsj-bg-05.png") no-repeat center right;
+    background-size: cover
+}
+
+.ui-list-68 > li.list-6 {
+    background: #D9B273 url("../img/xzsj-bg-06.png") no-repeat center right;
+    background-size: cover
 }
 
 .ui-list-68 li h4 {
