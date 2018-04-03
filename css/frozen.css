@@ -1838,7 +1838,7 @@ h6,.ui-txt-tips {
 
 .ui-list-info p {
     color: #777;
-    font-size: 15px
+    font-size: 14px
 }
 
 .ui-list-text .ui-list-info {
@@ -1847,7 +1847,7 @@ h6,.ui-txt-tips {
 }
 
 .ui-list li h4 {
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .ui-list:not(.ui-list-text) li>p,.ui-list li>h5 {

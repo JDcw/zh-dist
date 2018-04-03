@@ -10,15 +10,23 @@
     <link rel="stylesheet" href="css/zy.media.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <script src="js/jquery-1.8.3.min.js"></script>
-    <script src="js/zy.media.min.js"></script>
 
 </head>
 
 <body ontouchstart>
+<audio style="display:none; height: 0" id="bg-music" preload="auto" autoplay="autoplay">
+    <source type="audio/mpeg" src="music/begin.mp3"/>
+</audio>
 <section class="ui-welcome-img">
     <img  class="animated shake" src="img/exam-logo.png"/>
 </section>
 <script>
+    $(function(){
+        var audio = document.querySelector("#bg-music");
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+        }, false);
+    });
     $('.ui-welcome-img img').click(function(){
         location.href= '180209-17.html';
     });

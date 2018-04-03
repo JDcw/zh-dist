@@ -17,6 +17,9 @@
 <!-- <header class="ui-header ui-header-positive ui-border-b">
     <i class="ui-icon-return" onclick="history.back()"></i><h1 class="PingFangJianRegular">结语</h1><i class="ui-icon-share"></i>
 </header> -->
+<audio style="display:none; height: 0" id="bg-music" preload="auto" autoplay="autoplay">
+    <source type="audio/mpeg" src="music/sorry.mp3" />
+</audio>
 <footer class="ui-footer ui-footer-btn">
     <div class="demo-item">
         <div class="demo-block bgcount">
@@ -51,6 +54,12 @@
 
         </section><!-- /.ui-container-->
         <script>
+        $(function(){
+            var audio = document.querySelector("#bg-music");
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                audio.play();
+            }, false);
+        });
         $('.ui-list li,.ui-tiled li').click(function(){
             if($(this).data('href')){
                 location.href= $(this).data('href');
