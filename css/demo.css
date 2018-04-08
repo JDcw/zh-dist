@@ -399,7 +399,7 @@ color: rgb(102,102,102);
 
 .iconedit20 {
     display: inline-block;
-    font-size: 22px;
+    font-size: 18px;
 }
 .padding5-0{padding: 3px 0px;}
 .padding10-0{padding: 10px 0px;}
@@ -518,6 +518,18 @@ div.speech:after
 
 .ui-txt-gold {
     color: #dab275;
+}
+
+.demo-item-title {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 0px;
+}
+
+.demo-item-title p{
+    color:#909090;
+    font-weight: 300;
 }
 
 .demo-desc {

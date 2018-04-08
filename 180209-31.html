@@ -9,7 +9,51 @@
     <link rel="stylesheet" href="css/demo.css">
     <link rel="stylesheet" href="css/animate.css">
     <script src="lib/zepto.min.js"></script>
-
+    <style type="text/css">
+        .screen {
+            width: 100%;
+            height: 60%;
+            position: relative;
+        }
+        .animate {
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            position: absolute;
+            animation: action 3s;
+            top: calc(80% - 100px);
+            right: -100px;
+        }
+        .zhang {
+            width: 80px;
+            height: 80px;
+            margin-top: 0;
+            margin-left: 35%;
+            margin-bottom: 10px;
+            visibility: hidden;
+            animation: show .5s ease 1.5s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes action {
+            0% {
+                right: -100px;
+            }
+            50% {
+                right: 100px;
+            }
+            100% {
+                right: -100px;
+            }
+        }
+        @keyframes show {
+            0% {
+                visibility: hidden;
+            }
+            100% {
+                visibility: visible;
+            }
+        }
+    </style>
 </head>
 
 
@@ -44,7 +88,17 @@
             </ul>
 
             <section class="ui-finish-img">
-                <span class="w700"><img class="animated shake" src="img/zjcs-r3.png"/></span>
+                    <span class="w700">
+                            <div class="screen">
+                                    <img src="img/zjcs-r3-bg.png"/>
+                                    <div class="animate">
+                                        <img src="img/zjcs-yz.png"/>
+                                    </div>
+                                    <div class="zhang">
+                                        <img src="img/zjcs-r3-yz.png"/>
+                                    </div>
+                                </div>
+                    </span>
             </section>
             <div class="speech ui-color-102 PingFangJianRegular">还差点哦，黄金投资<br>形势看清才好出手<br><span class="ui-finish3-img"><img src="img/300X60-3.png"></span></div>
 
