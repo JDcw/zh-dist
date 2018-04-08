@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1,width=device-width, maximum-scale=1, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <title>终极测试</title>
     <link rel="stylesheet" href="css/frozen.css">
@@ -10,15 +10,19 @@
     <link rel="stylesheet" href="css/animate.css">
     <script src="lib/zepto.min.js"></script>
     <style type="text/css">
+        body {
+            overflow-x: hidden;
+        }
         .screen {
             width: 100%;
-            height: 60%;
+            height: 100%;
             position: relative;
         }
         .animate {
             width: 100px;
             height: 100px;
             overflow: hidden;
+            visibility: hidden;
             position: absolute;
             animation: action 3s;
             top: calc(80% - 100px);
@@ -27,9 +31,9 @@
         .zhang {
             width: 80px;
             height: 80px;
-            margin-top: 0;
-            margin-left: 35%;
-            margin-bottom: 10px;
+            margin: 0 auto;
+            margin-top: 0px;
+            margin-bottom: 25px;
             visibility: hidden;
             animation: show .5s ease 1.5s;
             animation-fill-mode: forwards;
@@ -37,12 +41,15 @@
         @keyframes action {
             0% {
                 right: -100px;
+                visibility: hidden;
             }
             50% {
                 right: 100px;
+                visibility: visible;
             }
             100% {
                 right: -100px;
+                visibility: hidden;
             }
         }
         @keyframes show {
@@ -62,7 +69,7 @@
     <i class="ui-icon-return" onclick="history.back()"></i><h1 class="PingFangJianRegular">结语</h1><i class="ui-icon-share"></i>
 </header> -->
 <audio style="display:none; height: 0" id="bg-music" preload="auto" autoplay="autoplay">
-    <source src="music/nice.ogg"/>
+    <source src="music/nice.ogg" type="audio/ogg"/>
     <source src="music/nice.wav"/>
     <source src="music/nice.mp3"/>
 </audio>
@@ -90,18 +97,19 @@
             <section class="ui-finish-img">
                 <span class="w700">
                     <div class="screen">
-                        <img src="img/zjcs-r1-bg.png"/>
+                        <div>
+                            <img src="img/zjcs-r1-bg.png"/>
+                        </div>
+                        <div class="zhang">
+                            <img src="img/zjcs-r1-yz.png"/>
+                        </div>
                         <div class="animate">
                             <img src="img/zjcs-yz.png"/>
                         </div>
-		                <div class="zhang">
-                            <img src="img/zjcs-r1-yz.png"/>
-                        </div>
                     </div>
                 </span>
+                <div class="speech ui-color-102 PingFangJianRegular">你已经掌握黄金投资的基本知识投资妥妥的<br><span class="ui-finish1-img"><img src="img/300X60-1.png"></span></div>
             </section>
-            <div class="speech ui-color-102 PingFangJianRegular">你已经掌握黄金投资的基本知识投资妥妥的<br><span class="ui-finish1-img"><img src="img/300X60-1.png"></span></div>
-
         </div>
     </div>
 </section>
@@ -114,14 +122,6 @@
             document.addEventListener("WeixinJSBridgeReady", function () {
                 audio.play();
             }, false);
-        });
-        $('.ui-list li,.ui-tiled li').click(function(){
-            if($(this).data('href')){
-                location.href= $(this).data('href');
-            }
-        });
-        $('.ui-header .ui-btn').click(function(){
-            location.href= 'index.html';
         });
         </script>
     </body>
