@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/demo.css">
     <link rel="stylesheet" href="css/animate.css">
     <script src="lib/zepto.min.js"></script>
+    <script src="js/question.js"></script>
     <style type="text/css">
         body {
             overflow-x: hidden;
@@ -75,7 +76,7 @@
     <div class="demo-item">
         <div class="demo-block">
             <ul class="ui-row padding20-0">
-                <li class="ui-col ui-col-100"><h2 class="ui-text-c PingFangJianRegular">（答对4-7题）答对xx题！</h2></li>
+                <li class="ui-col ui-col-100"><h2 class="ui-text-c PingFangJianRegular" id="r">（答对4-7题）答对xx题！</h2></li>
             </ul>
 
             <section class="ui-finish-img">
@@ -100,5 +101,11 @@
 
 
         </section><!-- /.ui-container-->
+        <script>
+            $(function(){
+                var c = result();
+                $('#r').text("（答对4-7题）答对"+c+"题！");
+            });
+        </script>
     </body>
 </html>

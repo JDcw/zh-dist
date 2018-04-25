@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/demo.css">
     <link rel="stylesheet" href="css/animate.css">
     <script src="lib/zepto.min.js"></script>
+    <script src="js/question.js"></script>
 </head>
 
 
@@ -69,8 +70,16 @@
 
         </section><!-- /.ui-container-->
         <script>
-        $('.ui-col button').click(function(){
-            location.href= '180209-29.html';
+        $('.ui-col button').click(function() {
+            doAnswer('12', $(this).text().charAt(0));
+            var counter = checkQuestions();
+            if (counter >= 8) {
+                location.href= '180209-29.html';
+            } else if (counter >= 4 && counter <= 7) {
+                location.href= '180209-30.html';
+            } else if (counter >= 1 && counter <= 3) {
+                location.href= '180209-31.html';
+            }
         });
         </script>
     </body>

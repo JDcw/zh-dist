@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/demo.css">
     <link rel="stylesheet" href="css/animate.css">
     <script src="lib/zepto.min.js"></script>
+    <script src="js/question.js"></script>
 </head>
 
 
@@ -65,6 +66,7 @@
         </section><!-- /.ui-container-->
         <script>
         $('.ui-col button').click(function(){
+            doAnswer('2', $(this).text().charAt(0));
             location.href= '180209-19.html';
         });
         </script>
