@@ -94,7 +94,9 @@
             </section>
             <div class="speech ui-color-102 PingFangJianRegular">建议你在多巩固巩固黄金知识~这样才能在“金场”<br><span class="ui-finish2-img"><img src="img/300X60-2.png"></span></div>
 
-
+            <div style="margin-top: 20px;" align="center">
+                <button class="ui-btn ui-btn-danger" onclick="doClose()">关闭</button>
+            </div>
         </div>
     </div>
 </section>
@@ -106,6 +108,10 @@
                 var c = result();
                 $('#r').text("（答对4-7题）答对"+c+"题！");
             });
+
+            function doClose() {
+                location.href = "cmbgold://closeWindow";
+            }
         </script>
     </body>
 </html>

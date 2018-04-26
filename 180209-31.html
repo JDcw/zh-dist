@@ -99,7 +99,9 @@
             </section>
             <div class="speech ui-color-102 PingFangJianRegular">还差点哦，黄金投资<br>形势看清才好出手<br><span class="ui-finish3-img"><img src="img/300X60-3.png"></span></div>
 
-
+            <div style="margin-top: 20px;" align="center">
+                <button class="ui-btn ui-btn-danger" onclick="doClose()">关闭</button>
+            </div>
         </div>
     </div>
 </section>
@@ -115,6 +117,10 @@
                 audio.play();
             }, false);
         });
+
+        function doClose() {
+            location.href = "cmbgold://closeWindow";
+        }
         </script>
     </body>
 </html>
