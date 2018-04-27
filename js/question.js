@@ -29,7 +29,6 @@ function checkQuestions() {
 
 function result() {
     var result = storage.getItem("result");
-    clearQuestions();
     return result;
 }
 

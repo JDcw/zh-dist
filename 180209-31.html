@@ -81,7 +81,7 @@
     <div class="demo-item">
         <div class="demo-block">
             <ul class="ui-row padding20-0">
-                <li class="ui-col ui-col-100"><h2 class="ui-text-c PingFangJianRegular" id="r">（答对1-3题）答对xx题！</h2></li>
+                <li class="ui-col ui-col-100"><h2 class="ui-text-c PingFangJianRegular" id="r">答对xx题！</h2></li>
             </ul>
 
             <section class="ui-finish-img">
@@ -111,7 +111,7 @@
         <script>
         $(function(){
             var c = result();
-            $('#r').text("（答对1-3题）答对"+c+"题！");
+            $('#r').text("答对"+c+"题！");
             var audio = document.querySelector("#bg-music");
             document.addEventListener("WeixinJSBridgeReady", function () {
                 audio.play();
@@ -119,6 +119,7 @@
         });
 
         function doClose() {
+            clearQuestions();
             location.href = "cmbgold://closeWindow";
         }
         </script>
