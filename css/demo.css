@@ -516,6 +516,11 @@ div.speech:after
     font-weight: 300;
 }
 
+.ui-whitespace p img {
+    display: block;
+    margin: 0 auto;
+}
+
 .ui-txt-gold {
     color: #dab275;
 }
