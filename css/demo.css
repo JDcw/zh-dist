@@ -590,6 +590,10 @@ div.speech:after
     background-color: rgba(128, 0, 128, 0.5);
     border-radius: 15px 15px 15px 15px;
     font-weight: 300;
+    text-align: left;
+    background: url("../img/jc-left.png") no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;
 }
 
 .inner-right {
@@ -599,6 +603,10 @@ div.speech:after
     background-color: rgba(86, 86, 252, 0.5);
     border-radius: 15px 15px 15px 15px;
     font-weight: 300;
+    text-align: left;
+    background: url("../img/jc-right.png") no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;
 }
 
 .progress-s {
@@ -607,6 +615,22 @@ div.speech:after
     margin-left: 10%;
     margin-bottom: 10%;
     border-radius: 3px 3px 3px 3px;
+}
+
+.progress-sp-left {
+    background: #381B31 !important;
+}
+
+.progress-sp-right {
+    background: #01009A !important;
+}
+
+.progress-v {
+    background: #fff !important;
+}
+
+.p-m-l {
+    margin-left: 10%;
 }
 
 .zan-size {

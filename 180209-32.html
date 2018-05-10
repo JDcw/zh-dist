@@ -20,8 +20,10 @@
         </ul>
         <div class="demo-item">
             <div class="ui-whitespace">
-                <p class="ui-text-c" style="font-weight: 300; color: #fff;">黄金猜猜看 | 本周5金价是否能实现10连涨</p>
-                <p class="ui-text-c p-bg">竞猜进行中32132人参与竞猜</p>
+                <p class="ui-text-c" style="font-weight: 300; color: #fff;" id="jc-title">黄金猜猜看 | 本周5金价是否能实现10连涨</p>
+                <p class="ui-m20"></p>
+                <p class="ui-text-c p-bg" id="jc-count">竞猜进行中32132人参与竞猜</p>
+                <p class="ui-m20"></p>
             </div>
         </div>
         <div class="demo-item">
@@ -29,22 +31,23 @@
                 <div class="outer">
                     <div class="inner-left">
                         <p class="ui-m20"></p>
-                        <p>周五会跌</p>
-                        <p>确认</p>
+                        <p id="jc-negative-title" class="p-m-l">周五会跌</p>
+                        <p onclick="doSubmit(false)" class="p-m-l">确认</p>
                         <p class="ui-m40"></p>
-                        <i class="ui-icon-zan zan-size">支持率81.86%</i>
-                        <div class="ui-progress progress-s">
-                            <span style="width: 81.86%;"></span>
+                        <i class="ui-icon-zan zan-size p-m-l" style="font-weight: 100; margin-left: 10%;" id="jc-negative-scale-desc">&nbsp;支持率81.86%</i>
+                        <div class="ui-progress progress-s progress-sp-left">
+                            <span style="width: 81.86%;" class="progress-v" id="jc-negative-scale"></span>
                         </div>
                     </div>
+                    <div style="display: inline-block; width: 15px;"></div>
                     <div class="inner-right">
                         <p class="ui-m20"></p>
-                        <p>周五10连涨</p>
-                        <p>确认</p>
+                        <p id="jc-positive-title" class="p-m-l">周五10连涨</p>
+                        <p onclick="doSubmit(true)" class="p-m-l">确认</p>
                         <p class="ui-m40"></p>
-                        <i class="ui-icon-zan zan-size">支持率18.14%</i>
-                        <div class="ui-progress progress-s">
-                            <span style="width: 18.14%;"></span>
+                        <i class="ui-icon-zan zan-size p-m-l" style="font-weight: 100;" id="jc-positive-scale-desc">&nbsp;支持率18.14%</i>
+                        <div class="ui-progress progress-s progress-sp-right">
+                            <span style="width: 18.14%;" class="progress-v" id="jc-positive-scale"></span>
                         </div>
                     </div>
                 </div>
@@ -52,7 +55,7 @@
         </div>
         <div class="demo-item">
             <div class="ui-whitespace">
-                <p class="jc-h-12">竞猜时间2018-05-08 14:00:00 ~ 2018--05-09 18:00:00，竞猜结果会通过消息通知您</p>
+                <p class="jc-h-12" id="jc-time">竞猜时间2018-05-08 14:00:00 ~ 2018--05-09 18:00:00，竞猜结果会通过消息通知您</p>
             </div>
         </div>
         <div class="demo-item">
@@ -60,9 +63,9 @@
                 <div class="ui-whitespace">
                     <p class="jc-h-12">上期竞猜</p>
                     <p class="line-separator"></p>
-                    <p style="color: #fff;">猜涨势 | 黄金5月12日会涨吗？</p>
+                    <p style="color: #fff;" id="jc-last-title">猜涨势 | 黄金5月12日会涨吗？</p>
                     <p class="ui-m20"></p>
-                    <p class="jc-h-12">竞猜结果：“涨”获胜</p>
+                    <p class="jc-h-12" id="jd-last-result">竞猜结果：“涨”获胜</p>
                     <p class="jc-h-12">您未参与本次竞猜</p>
                 </div>
             </div>
@@ -70,6 +73,75 @@
     </section>
 </body>
 <script>
+    $(function () {
+        // FIXME 示例
+        // getQuestion(2);
+    });
+
+    /** 初始化竞猜内容 */
+    function getQuestion(id) {
+        $.get("http://52.80.99.121/api/v1/goldlecture/guessing/topic", { topic_id: id }, function (response) {
+            if (response.status != "ok") {
+                alert("初始化竞猜！");
+            } else {
+                var sessionId = response.data.session;//sessionID
+                var title = response.data.title;//标题
+                var startTime = response.data.start_time;//开始时间
+                var endTime = response.data.end_time;//结束时间
+                var positiveTitle = response.data.positive_title;//正标题
+                var positiveCount = response.data.positive_count;//正投票数
+                var negativeTitle = response.data.negative_title;//反标题
+                var negativeCount = response.data.negative_count;//反投票数
+                var totalCount = positiveCount + negativeCount;
+
+                $("#jc-title").text(title);
+                $("#jc-positive-title").text(positiveTitle);
+                $("#jc-negative-title").text(negativeTitle);
+                $("#jc-count").text("竞猜进行中" + totalCount + "人参与竞猜");
+                $("#jc-time").text("竞猜时间" + startTime + " ~ " + endTime + "，竞猜结果会通过消息通知您");
+                $("#jc-negative-scale-desc").text("支持率" + (negativeCount / totalCount) * 100 + "%");
+                $("#jc-positive-scale-desc").text("支持率" + (positiveCount / totalCount) * 100 + "%");
+
+                var lastData = response.data.last;
+                if (lastData) {
+                    var lastTitle = lastData.title;//标题
+                    var lastPositiveTitle = lastData.positive_title;
+                    var lastPegativeTitle = lastData.negative_title;
+                    var result = lastData.result;
+                    $("#jc-last-title").text(lastTitle);
+                    if (result) {
+                        $("#jd-last-result").text("竞猜结果：“" + lastPositiveTitle + "”获胜");
+                    } else {
+                        $("#jd-last-result").text("竞猜结果：“" + lastPegativeTitle + "”获胜");
+                    }
+                }
+            }
+        }, "json");
+    }
+    /** 竞猜 */
+    function doSubmit(result) {
+        $.post("http://52.80.99.121/api/v1/goldlecture/guessing/attempt", {
+            "topic_id": 2,
+            "session": "xxxxxxxxxxxxxx",
+            "result": result
+        }, function(response) {
+            if (response.status != "ok") {
+                alert("请求失败，错误码：" + response.error_code);
+            }
+        }, "json");
+    }
+    /** 确认是否竞猜过 */
+    function confirm() {
+        $.get("http://52.80.99.121/api/v1/goldlecture/guessing/attempt", {
+            "topic_id": 2,
+            "session": "xxxxxxxxxxxxxx"
+        }, function(response) {
+            if (response.status != "ok") {
+                alert("请求失败，错误码：" + response.error_code);
+            }
+        }, "json");
+    }
+    // 显示规则
     function show() {
         location.href = "180209-33.html";
     }

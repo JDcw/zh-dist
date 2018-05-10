@@ -9,6 +9,19 @@
     <link rel="stylesheet" href="css/frozen.css">
     <link rel="stylesheet" href="css/demo.css">
     <script src="js/jquery-1.8.3.min.js"></script>
+    <style>
+        .end-btn {
+            background: none;
+            width: 180px;
+            height: 45px;
+            border-style: solid;
+            border-width: 1.8px;
+            border-color: #2DA6E0;
+            border-radius: 10px 10px 10px 10px;
+            color: #2DA6E0;
+            font-weight: 600;
+        }
+    </style>
 </head>
 
 <body ontouchstart>
@@ -17,6 +30,7 @@
             <div class="demo-block">
                 <ul class="ui-row padding20-0">
                     <li class="ui-col ui-col-100">
+                        <p class="ui-m20"></p>
                         <h2 class="ui-text-c" style="color: #fff;">活动规则</h2>
                     </li>
                 </ul>
@@ -25,22 +39,34 @@
         <div class="demo-item">
             <div class="demo-block">
                 <div class="ui-whitespace">
-                    <p style="color: #fff;">1.竞猜详情规则：选择您认为争取的观点进行确认，每个用户每个话题只能参与一次竞猜；</p>
-                    <p class="ui-m20"></p>
-                    <p style="color: #fff;">2.竞猜时间：以每期竞猜话题公布时间段为准；</p>
-                    <p class="ui-m20"></p>
-                    <p style="color: #fff;">3.竞猜结果公布时间：每期竞猜结束后24小时内系统告知您本期竞猜结果。</p>
+                    <table style="color:#fff; font-size: 14px; font-weight: 300;">
+                        <tr>
+                            <td style="text-align: left " valign="top">1.&nbsp;</td>
+                            <td style="text-align: left">竞猜详情规则：选择您认为争取的观点进行确认，每个用户每个话题只能参与一次竞猜；</td>
+                        </tr>
+                        <tr><td height="28px"></td><td></td></tr>
+                        <tr>
+                            <td style="text-align: left " valign="top">2.&nbsp;</td>
+                            <td style="text-align: left">竞猜时间：以每期竞猜话题公布时间段为准；</td>
+                        </tr>
+                        <tr><td height="28px"></td><td></td></tr>
+                        <tr>
+                            <td style="text-align: left " valign="top">3.&nbsp;</td>
+                            <td style="text-align: left">竞猜结果公布时间：每期竞猜结束后24小时内系统告知您本期竞猜结果。</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
-        <div style="margin-top: 20px;" align="center">
-            <button class="ui-btn" style="background: none; width: 150px;" onclick="doClose()">我知道了</button>
+        <div style="margin-top: 40px;" align="center">
+            <button class="end-btn" onclick="doClose()">我知道了</button>
         </div>
     </section>
 </body>
-    <script>
-        function doClose() {
-            location.href = "180209-32.html";
-        }
-    </script>
+<script>
+    function doClose() {
+        location.href = "180209-32.html";
+    }
+</script>
+
 </html>
