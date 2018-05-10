@@ -137,13 +137,11 @@ em,i {
     display: block;
     color: rgba(0,0,0,.5)
 }
-.ui-icon-return:before { content: "\e617"; }
+.ui-icon-return:before { content: "\e682"; }
 
-.ui-icon-share:before { content: "\e659"; }
+.ui-icon-share:before { content: "\e63b"; }
 
-.ui-icon-pen:before { content: "\e65a"; }
-
-.ui-icon-edit:before { content: "\e65b"; }
+.ui-icon-zan:before { content: "\e677"; }
 
 a {
     color: #00a5e0

@@ -142,6 +142,12 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
+.ui-text-r {
+    margin-top: 30px;
+    text-align: right;
+    padding-right: 10px;
+}
+
 
 .ui-txt-fb600 {
     font-weight: 600;
@@ -175,6 +181,14 @@ color: rgb(102,102,102);
 
 .ui-m20 {
     margin: 20px 0px;
+}
+
+.ui-m30 {
+    margin: 30px 0px;
+}
+
+.ui-m40 {
+    margin: 40px 0px;
 }
 
 .ui-list li h4 {
@@ -551,4 +565,67 @@ div.speech:after
 
 .ui-placehold {
     color:rgb(153,153,153);
+}
+
+
+
+.jcbg {
+    background: url("../img/jc-bg.jpg") no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;
+    color: white;
+    background-attachment: fixed;
+}
+
+.outer {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+.inner-left {
+    display: inline-block;
+    width: 40%;
+    height: 160px;
+    background-color: rgba(128, 0, 128, 0.5);
+    border-radius: 15px 15px 15px 15px;
+    font-weight: 300;
+}
+
+.inner-right {
+    display: inline-block;
+    width: 40%;
+    height: 160px;
+    background-color: rgba(86, 86, 252, 0.5);
+    border-radius: 15px 15px 15px 15px;
+    font-weight: 300;
+}
+
+.progress-s {
+    height: 4px;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.zan-size {
+    line-height: 20px;
+    color: white;
+    font-size: 12px;
+}
+
+.jc-h-12 {
+    font-size: 12px;
+    color: #a1a1a1 !important;
+    font-weight: 300;
+}
+
+.p-bg {
+    background-color: #082B61;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff !important;
 }
